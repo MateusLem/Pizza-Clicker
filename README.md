@@ -11,6 +11,8 @@
 
 * [Imports](#Imports)
 
+* [Executando](#Executando)
+
 * [Tecnologias](#Tecnologias)
 
 * [Contatos](#Contatos)
@@ -61,19 +63,37 @@ Tentativa mal sucedida de fazer um componente para a imagem do botão.<br><br>
 - [TouchableOpacity](https://reactnative.dev/docs/touchableopacity) - ReactNative
 - [StyleSheet](https://reactnative.dev/docs/stylesheet) - ReactNative
 
-## Rodando
-No VSC
+## Executando
+Siga os seguintes passos para executar o projeto:
+
+### Clonando repositório
+```
+git clone https://github.com/MateusLem/Pizza-Clicker.git
+```
+### Instalando dependências
 ```
 npm install
 ```
+
+Caso deseje executar o projeto na web, também execute o seguinte código:
+```
+npx expo install react-native-web@~0.18.10 react-dom@18.2.0 @expo/webpack-config@^18.0.1
+```
+
+### Executando projeto
 ```
 npx expo start
 ```
+
+Ao iniciar o projeto, um QRcode e um link serão gerados.
+Utilize qualquer um dos dois para executar o projeto em seu dispositivo mobile
+
 ## Tecnologias 🛠️
 Ferramentas utilizadas para este projeto:
 - [React](https://react.dev)
 - [ReactNative](https://reactnative.dev)
 - [Expo](https://www.expo.dev)
+- [Expo Go](https://expo.dev/client?utm_source=google&utm_medium=cpc&utm_content=performancemax&gclid=CjwKCAjwyNSoBhA9EiwA5aYlb02f86q0jKJ0cvHirJeDzpXetdteDIZr_Hwd8BqIC1DsMT9xAbkejxoC3ssQAvD_BwE)
 
 ## Contatos
 Desenvolvido por Mateus Leme
