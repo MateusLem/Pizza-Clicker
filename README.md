@@ -72,12 +72,24 @@ git clone https://github.com/MateusLem/Pizza-Clicker.git
 ```
 ### Instalando dependências
 ```
-npm install
+npm i
 ```
 
-Caso deseje executar o projeto na web, também execute o seguinte código:
+Atualize o seu expo, caso necessário
+
 ```
-npx expo install react-native-web@~0.18.10 react-dom@18.2.0 @expo/webpack-config@^18.0.1
+npm install expo@latest
+```
+```
+npx expo install --fix
+```
+```
+npm update
+```
+
+Caso deseje executar o projeto na web:
+```
+npx expo install react-native-web@~0.19.6 react-dom@18.2.0 @expo/webpack-config@^19.0.0
 ```
 
 ### Executando projeto
@@ -86,7 +98,7 @@ npx expo start
 ```
 
 Ao iniciar o projeto, um QRcode e um link serão gerados.
-Utilize qualquer um dos dois para executar o projeto em seu dispositivo mobile
+Utilize qualquer um dos dois no app [Expo Go](https://expo.dev/client?utm_source=google&utm_medium=cpc&utm_content=performancemax&gclid=CjwKCAjwyNSoBhA9EiwA5aYlb02f86q0jKJ0cvHirJeDzpXetdteDIZr_Hwd8BqIC1DsMT9xAbkejxoC3ssQAvD_BwE) para executar o projeto em seu dispositivo mobile
 
 ## Tecnologias 🛠️
 Ferramentas utilizadas para este projeto:
