@@ -72,7 +72,7 @@ git clone https://github.com/MateusLem/Pizza-Clicker.git
 ```
 ### Instalando dependências
 ```
-npm install
+npm i
 ```
 
 Caso deseje executar o projeto na web, também execute o seguinte código:
