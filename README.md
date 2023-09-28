@@ -51,7 +51,7 @@ Contém o componente que mostra as informações dos upgrades.<br><br>
 <a href="pizza-clicker\components\UpgradeContent.js">Ver código</a>
 
 ### ClickerImage
-Tentativa mal sucedida de fazer um componente para a imagem do botão.<br><br>
+Componente para a imagem do botão em testes.<br><br>
 <a href="pizza-clicker\components\ClickerImage.js">Ver código</a>
 
 ## Imports
