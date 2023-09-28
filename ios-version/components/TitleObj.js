@@ -19,8 +19,8 @@ export default function TitleObj({ value, desc, title }) {
 const styles = StyleSheet.create({
   titleContainer: {
     margin: 8,
-    height: 50,
-    width: '100%',
+    padding: 5,
+    fontSize:25,
     backgroundColor: '#3085d6', 
     justifyContent: 'center', 
     alignItems: 'center', 

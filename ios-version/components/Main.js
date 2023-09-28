@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-import Pizza from '../assets/pizza.png';
+import Pizza from '../../icons/assets/pizza.png';
 import TitleObj from './TitleObj';
 import UpgradeContent from './UpgradeContent';
 
@@ -51,7 +51,7 @@ export default function Main() {
   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <TitleObj value={state.slices} desc="Número de pedaços de pizza que você comeu" title="Pedaços" />
       <TitleObj value={state.dmg} desc="Quantidade de pedaços você pode comer de uma vez" title="Gula" />
 
@@ -67,8 +67,10 @@ export default function Main() {
 }
 
 const styles = StyleSheet.create({
+  container:{
+    padding: 5,
+  },
   imgContainer: {
-    padding: 10,
     margin: 10,
     borderWidth: 2,
     borderRadius: 10,
@@ -76,11 +78,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#f7f7c6',
   },
   img: {
-    flex: 1,
     aspectRatio: 1,
     resizeMode: 'contain',
-    height: '30%',
-    width: "100%",
+    width: '100%',
   },
   upgrade: {
     backgroundColor: '#1d9c14',
