@@ -6,23 +6,24 @@ export default function TitleObj({ value, desc, title }) {
       style={styles.titleContainer}
       onPress={() => {
         console.log(desc);
-        //alert(desc);
+        alert(desc);
       }}>
       <Text style={{ color: 'white' }}>
         {title}: {value}
       </Text>
-      <Text style={{ color: 'white', padding: '0.5vh' }}>&#9432;</Text>
+      <Text style={{ color: 'white', padding: 5 }}>&#9432;</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   titleContainer: {
-    margin: '1vh',
-    minHeight: '5vh',
-    minWidth: '40vw',
-    background: '#3085d6',
-    textAlign: 'center',
-    borderRadius: '10px',
-  },
+    margin: 8,
+    height: 50,
+    width: '100%',
+    backgroundColor: '#3085d6', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    borderRadius: 10,
+  }
 });

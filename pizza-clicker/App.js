@@ -1,24 +1,23 @@
-import Main from './components/Main';
 import { View, StyleSheet } from 'react-native';
+import Main from './components/Main';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Main/>
+      <Main />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
+    flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    background: '#d6c083',
-    height: '100vh',
-    borderWidth: '10px',
+    backgroundColor: '#d6c083',
+    borderWidth: 10,
     borderColor: 'white',
-    padding: '1vh',
+    padding: 10,
   },
 });

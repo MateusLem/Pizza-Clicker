@@ -13,6 +13,8 @@
 
 * [Executando](#Executando)
 
+* [Considerações](#Considerações)
+
 * [Tecnologias](#Tecnologias)
 
 * [Contatos](#Contatos)
@@ -74,9 +76,6 @@ git clone https://github.com/MateusLem/Pizza-Clicker.git
 ```
 npm i
 ```
-
-Atualize o seu expo, caso necessário
-
 ```
 npm install expo@latest
 ```
@@ -86,8 +85,6 @@ npx expo install --fix
 ```
 npm update
 ```
-
-Caso deseje executar o projeto na web:
 ```
 npx expo install react-native-web@~0.19.6 react-dom@18.2.0 @expo/webpack-config@^19.0.0
 ```
@@ -98,7 +95,12 @@ npx expo start
 ```
 
 Ao iniciar o projeto, um QRcode e um link serão gerados.
-Utilize qualquer um dos dois no app [Expo Go](https://expo.dev/client?utm_source=google&utm_medium=cpc&utm_content=performancemax&gclid=CjwKCAjwyNSoBhA9EiwA5aYlb02f86q0jKJ0cvHirJeDzpXetdteDIZr_Hwd8BqIC1DsMT9xAbkejxoC3ssQAvD_BwE) para executar o projeto em seu dispositivo mobile
+Utilize qualquer um dos dois no app [Expo Go](https://expo.dev/client?utm_source=google&utm_medium=cpc&utm_content=performancemax&gclid=CjwKCAjwyNSoBhA9EiwA5aYlb02f86q0jKJ0cvHirJeDzpXetdteDIZr_Hwd8BqIC1DsMT9xAbkejxoC3ssQAvD_BwE) para executar o projeto em seu dispositivo mobile.
+
+Quando isso acontecer, é possível pressionar "w" durante a execução no terminal para acessar a versão web do projeto.
+
+## Considerações
+Planejo fazer melhorias, como desenvolver uma loja para os upgrades, efeitos exclusivos, etc.
 
 ## Tecnologias 🛠️
 Ferramentas utilizadas para este projeto:

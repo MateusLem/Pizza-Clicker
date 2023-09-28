@@ -13,17 +13,17 @@ export default function UpgradeContent({ level, power, cost }) {
 const styles = StyleSheet.create({
   upgradeTxt: {
     color: 'white',
-    fontSize: '25px',
+    fontSize: 25,
     fontWeight: 'bold',
   },
   upgradeGula: {
     color: '#f5c440',
-    fontSize: '25px',
+    fontSize: 25,
     fontWeight: 'bold',
   },
   upgradeCost: {
     color: '#d91414',
-    fontSize: '25px',
+    fontSize: 25,
     fontWeight: 'bold',
   },
 });

@@ -1,8 +1,9 @@
-import { useReducer } from 'react';
+import React, { useReducer } from 'react';
+import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
+
 import Pizza from '../assets/pizza.png';
 import TitleObj from './TitleObj';
 import UpgradeContent from './UpgradeContent';
-import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default function Main() {
   const initialState = { slices: 0, dmg: 1, upCost: 10, upVal: 5, lvl: 2 };
@@ -11,32 +12,16 @@ export default function Main() {
     const type = action.type;
 
     if (type === 'INCREMENT') {
-      return {
-        slices: currentState.slices + currentState.dmg,
-        dmg: currentState.dmg,
-        upCost: currentState.upCost,
-        upVal: currentState.upVal,
-        lvl: currentState.lvl,
-      };
+      const slices = currentState.slices + currentState.dmg;
+      return { ...currentState, slices };
     } else if (type === 'UPGRADE') {
       if (currentState.slices >= currentState.upCost) {
-        if (currentState.dmg % 2 == 0) {
-          return {
-            slices: currentState.slices - currentState.upCost,
-            dmg: currentState.dmg + currentState.upVal,
-            upCost: currentState.upCost * 10,
-            upVal: currentState.upVal * 2,
-            lvl: currentState.lvl + 1,
-          };
-        } else {
-          return {
-            slices: currentState.slices - currentState.upCost,
-            dmg: currentState.dmg + currentState.upVal,
-            upCost: currentState.upCost * 10,
-            upVal: currentState.upVal * 10,
-            lvl: currentState.lvl + 1,
-          };
-        }
+        let upVal = currentState.dmg + currentState.upVal;
+        let upCost = currentState.upCost * (upVal % 2 === 0 ? 10 : 100);
+        let lvl = currentState.lvl + 1;
+        const slices = currentState.slices - currentState.upCost;
+
+        return { ...currentState, slices, dmg: upVal, upCost, upVal, lvl };
       } else {
         let insuficient =
           'Pedaços insuficientes! Faltam ' +
@@ -44,7 +29,6 @@ export default function Main() {
           ' pedaços';
 
         console.log(insuficient);
-        //alert(insuficient);
       }
     }
     return currentState;
@@ -52,44 +36,31 @@ export default function Main() {
 
   const [state, funcaoDispatch] = useReducer(funcaoReducer, initialState);
 
+  const handleIncrement = () => {
+    funcaoDispatch({
+      type: 'INCREMENT',
+      payload: {},
+    });
+  };
+
+  const handleUpgrade = () => {
+    funcaoDispatch({
+      type: 'UPGRADE',
+      payload: {},
+    });
+  };
+
   return (
     <View>
-      <TitleObj
-        value={state.slices}
-        desc="Número de pedaços de pizza que você comeu"
-        title="Pedaços"
-      />
+      <TitleObj value={state.slices} desc="Número de pedaços de pizza que você comeu" title="Pedaços" />
+      <TitleObj value={state.dmg} desc="Quantidade de pedaços você pode comer de uma vez" title="Gula" />
 
-      <TitleObj
-        value={state.dmg}
-        desc="Quantidade de pedaços você pode comer de uma vez"
-        title="Gula"
-      />
-
-      <TouchableOpacity
-        style={styles.imgContainer}
-        onPress={() => {
-          funcaoDispatch({
-            type: 'INCREMENT',
-            payload: {},
-          });
-        }}>
+      <TouchableOpacity style={styles.imgContainer} onPress={handleIncrement}>
         <Image style={styles.img} source={Pizza} />
       </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.upgrade}
-        onPress={() => {
-          funcaoDispatch({
-            type: 'UPGRADE',
-            payload: {},
-          });
-        }}>
-        <UpgradeContent
-          level={state.lvl}
-          power={state.upVal}
-          cost={state.upCost}
-        />
+      <TouchableOpacity style={styles.upgrade} onPress={handleUpgrade}>
+        <UpgradeContent level={state.lvl} power={state.upVal} cost={state.upCost} />
       </TouchableOpacity>
     </View>
   );
@@ -97,25 +68,25 @@ export default function Main() {
 
 const styles = StyleSheet.create({
   imgContainer: {
-    padding: '1vh',
-    margin: '10px',
-    borderWidth: '2px',
-    borderRadius: '10px',
+    padding: 10,
+    margin: 10,
+    borderWidth: 2,
+    borderRadius: 10,
     borderColor: 'red',
-    background: '#f7f7c6',
+    backgroundColor: '#f7f7c6',
   },
   img: {
     flex: 1,
     aspectRatio: 1,
     resizeMode: 'contain',
-    height: '30vh',
-    width: null,
+    height: '30%',
+    width: "100%",
   },
   upgrade: {
-    background: '#1d9c14',
-    padding: '5px',
+    backgroundColor: '#1d9c14',
+    padding: 5,
     textAlign: 'center',
     alignItems: 'center',
-    borderRadius: '10px',
+    borderRadius: 10,
   },
 });
