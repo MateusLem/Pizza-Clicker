@@ -61,6 +61,14 @@ Tentativa mal sucedida de fazer um componente para a imagem do botão.<br><br>
 - [TouchableOpacity](https://reactnative.dev/docs/touchableopacity) - ReactNative
 - [StyleSheet](https://reactnative.dev/docs/stylesheet) - ReactNative
 
+## Rodando
+No VSC
+```
+npm install
+```
+```
+npx expo start
+```
 ## Tecnologias 🛠️
 Ferramentas utilizadas para este projeto:
 - [React](https://react.dev)
