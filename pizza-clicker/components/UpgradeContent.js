@@ -15,15 +15,18 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 25,
     fontWeight: 'bold',
+    textAlign:'center',
   },
   upgradeGula: {
     color: '#f5c440',
     fontSize: 25,
     fontWeight: 'bold',
+    textAlign:'center',
   },
   upgradeCost: {
     color: '#d91414',
     fontSize: 25,
     fontWeight: 'bold',
+    textAlign:'center',
   },
 });

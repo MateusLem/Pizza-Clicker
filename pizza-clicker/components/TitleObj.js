@@ -5,20 +5,18 @@ export default function TitleObj({ value, desc, title }) {
     <TouchableOpacity
       style={styles.titleContainer}
       onPress={() => {
-        console.log(desc);
         alert(desc);
       }}>
       <Text style={{ color: 'white' }}>
         {title}: {value}
       </Text>
-      <Text style={{ color: 'white', padding: 5 }}>&#9432;</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   titleContainer: {
-    margin: 8,
+    marginRight: 10,
     padding: 5,
     fontSize:25,
     backgroundColor: '#3085d6', 

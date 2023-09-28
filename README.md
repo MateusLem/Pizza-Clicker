@@ -85,6 +85,7 @@ npx expo install --fix
 ```
 npm update
 ```
+Caso deseje rodar a versão web:
 ```
 npx expo install react-native-web@~0.19.6 react-dom@18.2.0 @expo/webpack-config@^19.0.0
 ```
@@ -100,8 +101,11 @@ Utilize qualquer um dos dois no app [Expo Go](https://expo.dev/client?utm_source
 Quando isso acontecer, é possível pressionar "w" durante a execução no terminal para acessar a versão web do projeto.
 
 ## Considerações
-Planejo fazer melhorias, como desenvolver uma loja para os upgrades, efeitos exclusivos, etc.
+Planejo fazer melhorias na interface, adicionando items como uma loja para os upgrades, efeitos exclusivos, etc.
 
+A funcionalidade na web está prejudicada pela estilização, mas sua execução está normal. Até futuras atualizações, recomendo utilizar apenas a versão mobile.
+
+A versão mobile funciona tanto para IOS quanto para Android
 ## Tecnologias 🛠️
 Ferramentas utilizadas para este projeto:
 - [React](https://react.dev)
